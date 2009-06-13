@@ -76,6 +76,24 @@ Note:
 Demo:
 	Try out demonstrations under "demo" directory.
 
+Changes:
+  2009-Jun-13: v1.1
+    add many options below;
+     - lock
+     - btnClass
+     - btnCss
+     - txtCss
+     - decimal
+     - beforeChange
+     - changed
+     - buttonUp
+     - buttonDown
+    change value of vertical-align style on button image. buttom to middle.
+    fixes max value bug.
+
+  2008-May-23: v1.0
+    first release.
+
 ----
 Copyright (c) 2009 MORI Naohiko
 Dual licensed under the MIT and GPL licenses.
