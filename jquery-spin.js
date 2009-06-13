@@ -1,5 +1,5 @@
 /**
- * jQuery Spin 1.1
+ * jQuery Spin 1.1.1
  *
  * Copyright (c) 2009 Naohiko MORI
  * Dual licensed under the MIT and GPL licenses.
@@ -67,7 +67,7 @@
 				o = o || {};
 				var opt = {};
 				$.each($.spin, function(k,v){
-					opt[k] = (o[k] ? o[k] : v);
+					opt[k] = (typeof o[k]!='undefined' ? o[k] : v);
 				});
         
         var txt = $(this);
@@ -98,8 +98,8 @@
           if(opt.decimal) val=val.replace(opt.decimal, '.');
           if(!isNaN(val)){
             val = calcFloat.sum(val, vector * opt.interval);
-            if(opt.min!=null && val<opt.min) val=opt.min;
-            if(opt.max!=null && val>opt.max) val=opt.max;
+            if(opt.min!==null && val<opt.min) val=opt.min;
+            if(opt.max!==null && val>opt.max) val=opt.max;
             if(val != txt.val()){
               if(opt.decimal) val=val.toString().replace('.', opt.decimal);
               var ret = ($.isFunction(opt.beforeChange) ? opt.beforeChange.apply(txt, [val, org_val]) : true);

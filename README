@@ -77,6 +77,9 @@ Demo:
 	Try out demonstrations under "demo" directory.
 
 Changes:
+  2009-Jun-14: v1.1.1
+    fix zero value bug.
+
   2009-Jun-13: v1.1
     add many options below;
      - lock
@@ -89,7 +92,7 @@ Changes:
      - buttonUp
      - buttonDown
     change value of vertical-align style on button image. buttom to middle.
-    fixes max value bug.
+    fix max value bug.
 
   2008-May-23: v1.0
     first release.
