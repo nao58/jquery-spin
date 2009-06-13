@@ -92,6 +92,7 @@ Changes:
      - buttonUp
      - buttonDown
     change value of vertical-align style on button image. buttom to middle.
+    fix float calculation problem.
     fix max value bug.
 
   2008-May-23: v1.0
