@@ -10,6 +10,7 @@
     get: function(num){
       var num = num.toString();
       if(num.indexOf('.')==-1) return[0, eval(num)];
+			if(num.indexOf('.')==0) num='0'+num;
       var nn = num.split('.');
       var po = nn[1].length;
       var st = nn.join('');
@@ -58,7 +59,8 @@
       beforeChange: null,
       changed: null,
       buttonUp: null,
-      buttonDown: null
+      buttonDown: null,
+			format: null
     }
   });
   $.fn.extend({
@@ -100,6 +102,7 @@
             val = calcFloat.sum(val, vector * opt.interval);
             if(opt.min!==null && val<opt.min) val=opt.min;
             if(opt.max!==null && val>opt.max) val=opt.max;
+						if($.isFunction(opt.format)) val=opt.format.apply(txt, [val]);
             if(val != txt.val()){
               if(opt.decimal) val=val.toString().replace('.', opt.decimal);
               var ret = ($.isFunction(opt.beforeChange) ? opt.beforeChange.apply(txt, [val, org_val]) : true);
